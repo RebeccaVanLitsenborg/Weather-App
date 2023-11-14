@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 0.2fr;
+    grid-template-areas: 
+        "sidebar nav nav nav"
+        "sidebar main main main"
+        "sidebar content content content"
+        "sidebar footer footer footer";
+    grid-gap: 0.5rem;
+    box-sizing: border-box;
+    padding: 50px;
+
+}
+
+nav {
+    background-color: blueviolet;
+    grid-area: nav;
+    border-top-right-radius: 25px;
+}
+
+main {
+    background-color:darkgrey;
+    grid-area: main;
+}
+
+#sidebar {
+    background-color: aquamarine;
+    grid-area: sidebar;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#content {
+    background-color:cadetblue;
+    grid-area: content;
+}
+
+
+footer {
+    background-color:darkorange;
+    grid-area: footer;
+    border-bottom-right-radius: 25px;
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 0.4fr;
+        grid-template-areas: 
+            "nav"
+            "sidebar"
+            "main"
+            "content"
+            "footer";
+    }
+
+    nav {
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }   
+    
+    #sidebar {
+        border-radius: 0;
+    }
+
+    footer {
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+}
