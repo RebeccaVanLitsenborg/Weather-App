@@ -1,24 +1,14 @@
 const cityInput = document.querySelector(".city-input");
 const searchButton = document.querySelector(".search-btn");
 
-const apiKey = `629cba6f263fe1269f69dd28b14a42e4`;
+import apiKey from './config';
 
 const getWeatherInfo = (cityName, lat, lon) => {
     const weatherApiUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     fetch(weatherApiUrl).then(response => response.json())
     .then(data => {
-        const uniqueWeatherDays = [];
         console.log(data);
-
-        data.list.filter(forecast => {
-            const weatherDate = new Date(forecast.dt_txt).getDate();
-            if(!uniqueWeatherDays.includes(weatherDate)) {
-                return uniqueWeatherDays.push(weatherDate);
-            }
-
-        });
-
     })
     .catch(() => {
         alert("An error occurred while fetching weather data.")
