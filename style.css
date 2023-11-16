@@ -4,67 +4,204 @@
 }
 
 body {
-    background-color: black;
+    background-image: url(./images/backdrop1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: normal;
+    color: white;
+}
+h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 0.3rem;
 }
 
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1.5fr 1.5fr 0.2fr;
     grid-template-areas: 
         "sidebar nav nav nav"
-        "sidebar main main main"
-        "sidebar content content content"
+        "sidebar dayone daytwo daythree"
+        "sidebar dayfour dayfive daysix"
         "sidebar footer footer footer";
-    grid-gap: 0.5rem;
     box-sizing: border-box;
+    gap: 0.3rem;
     padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    backdrop-filter:blur(5px);
 
 }
 
+.search {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    height: 45px;
+    font-size: 16px;
+    text-align: center;
+    flex: 1;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 2px #3c3c3c;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow:  1px 1px 1px #3c3c3c;
+}
+
+.search button img {
+    height: 38px;
+    width: 43px;
+}
+
+.weather h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: -15px;
+}
+
+p.today-date {
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.wind-humidity {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+    margin: 20px auto 30px auto;
+}
+
+p.wind, p.humidity {
+    font-size: 22px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+    font-size: 16px;
+    text-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.col img {
+    width: 30px;
+}
+
+.col p {
+    margin-left: 15px;
+}
+
+.weather h2 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.weather img {
+    margin: auto;
+    display: block; 
+}
+
+#dayone {
+    background-color: #ffffff3f;
+    grid-area: dayone;
+}
+
+#daytwo {
+    background-color: #ffffff3f;
+    grid-area: daytwo;
+}
+
+#daythree {
+    background-color: #ffffff3f;
+    grid-area: daythree;
+}
+
+#dayfour {
+    background-color: #ffffff3f;
+    grid-area: dayfour;
+}
+
+#dayfive {
+    background-color: #ffffff3f;
+    grid-area: dayfive;
+}
+
+#daysix {
+    background-color: #ffffff3f;
+    grid-area: daysix;
+}
+
 nav {
-    background-color: blueviolet;
+    background-color: #ffffff3f;
     grid-area: nav;
     border-top-right-radius: 25px;
 }
 
-main {
-    background-color:darkgrey;
-    grid-area: main;
-}
-
 #sidebar {
-    background-color: aquamarine;
+    background-color: #ffffff3f;
     grid-area: sidebar;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
 
-#content {
-    background-color:cadetblue;
-    grid-area: content;
-}
-
-
 footer {
-    background-color:darkorange;
+    background-color: #ffffff3f;
     grid-area: footer;
     border-bottom-right-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-@media only screen and (max-width: 750px) {
+footer img {
+    height: 30px;
+    padding: 10px 20px 5px 20px;
+}
+
+@media only screen and (max-width: 1060px) {
     .container {
+        padding: 10px;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 0.4fr;
+        grid-template-rows: 0.4fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
             "nav"
             "sidebar"
-            "main"
-            "content"
+            "dayone"
+            "daytwo"
+            "daythree"
+            "dayfour"
+            "dayfive"
+            "daysix"
             "footer";
     }
-
     nav {
         border-top-right-radius: 25px;
         border-top-left-radius: 25px;
@@ -77,5 +214,12 @@ footer {
     footer {
         border-bottom-right-radius: 25px;
         border-bottom-left-radius: 25px;
+    }
+
+    footer img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }

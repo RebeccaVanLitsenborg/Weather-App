@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Weather Forecast App</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-        <div class ="container">
-            <nav>Navbar</nav>
-            <main>Main</main>
-            <div id="sidebar">Sidebar</div>
-            <div id="content">Content</div>
-            <footer>Footer</footer>
+        <main class ="container">
+            <nav>
+                <h1>Weather Forecast</h1>
+            </nav>
+            <section id="daily-forecast"></section>
+                <section id="dayone">monday</section>
+                <section id="daytwo">tuesday</section>
+                <section id="daythree">wednesday</section>
+                <section id="dayfour">thursday</section>
+                <section id="dayfive">friday</section>
+                <section id="daysix">saturday</section>
+            </section>
+            <aside id="sidebar">
+                <p class="today-date">16 November 2023 09.39</p>
+                <div class="search">
+                    <input class="city-input" type ="text" placeholder="Enter City Name">
+                    <button class ="search-btn"><img src="./images/searchicon.png" alt="#"></button>
+                </div>
+                <div class="weather">
+                    <img src="./images/cloudsnow-02.png" height="220px"  alt="Clouds with snow">
+                    <h1 class="city-name">London</h2>
+                    <h2 class="temp">21°C</h1>
+                
+                    <div class="wind-humidity">
+                        <div class="col">
+                            <img src="./images/humidity.png">
+                            <div>
+                                <p class="humidity">50%</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="./images/wind.png">
+                            <div>
+                                <p class="wind">15 km/h</p>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+ 
+            <footer>
+                <a href="#"><img src="./images/facebook.png"></a>
+                <a href="#"><img src="./images/instgram.png"></a>
+                <a href="#"><img src="./images/twitter.png"></a>
+                <a href="#"><img src="./images/whatsapp.png"></a>
+                <a href="#"><img src="./images/linkedin.png"></a>
+                <a href="#"><img src="./images/tiktok.png"></a>
 
-        </div>
+            </footer>
+        </main>
+
 </body>
 </html>
