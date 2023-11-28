@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(./images/backdropog.jpg);
+    background-image: url(./images/backdrop.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     image-rendering: pixelated;
@@ -135,9 +135,14 @@ p.wind, p.humidity {
 #dayfive,
 #daysix
  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #ffffff3f;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+
 }
 
 .weathercard h3 {
